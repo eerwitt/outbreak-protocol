@@ -1,5 +1,6 @@
 # Outbreak Protocol
 A zombie-inspired FPS where deadly bears meet emergent, AI-driven chaos.
+![The Bears](Source/Media/the-bears.gif)
 
 What makes this game unique? Your friends can collaborate and discuss strategies in natural language with a custom Discord bot powered by Amazon Bedrock. This bot interprets their conversations and translates them into in-game chaos, creating emergent behavior and unpredictable gameplay moments.
 
