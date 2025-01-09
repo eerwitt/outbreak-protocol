@@ -20,6 +20,8 @@ Behind the scenes, Outbreak Protocol is powered by cutting-edge AWS services tha
 ### Spawn and Explore
 Players start in a grimy toilet stall. Open the door to find a sprawling meadow filled with zombie bears.
 
+![Toilet Spawn](Source/Media/toilet-spawn.gif)
+
 ### AI-Driven Chaos
 Your friends don’t just type commands—they chat naturally with the bot about how to disrupt your gameplay and strategize.
 
