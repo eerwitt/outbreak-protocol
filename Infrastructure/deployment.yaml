@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discord-bot
+  labels:
+    app: discord-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: discord-bot
+  template:
+    metadata:
+      labels:
+        app: discord-bot
+    spec:
+      containers:
+      - name: discord-bot
+        image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/discord-bot:latest
+        imagePullPolicy: Always
+        env:
+        - name: DISCORD_TOKEN
+          value: ${DISCORD_TOKEN}
+        livenessProbe:
+          exec:
+            command:
+            - pgrep
+            - python
+          initialDelaySeconds: 10  # Time to wait before performing the first check
+          periodSeconds: 30        # Interval between checks
+          failureThreshold: 3      # Number of failures before the container is restarted
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
