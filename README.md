@@ -1,4 +1,4 @@
-# Outbreak Protocol
+# Outbreak Protocol (WIP)
 A zombie-inspired FPS where deadly bears meet emergent, AI-driven chaos.
 
 ![The Bears](Source/Media/deaf-bear.gif)
@@ -6,6 +6,8 @@ A zombie-inspired FPS where deadly bears meet emergent, AI-driven chaos.
 *"Make the bear chasing him deaf and angry"*
 
 What makes this game unique? Your friends can collaborate and discuss strategies in natural language with a custom Discord bot powered by Amazon Bedrock. This bot interprets their conversations and translates them into in-game chaos, creating emergent behavior and unpredictable gameplay moments.
+
+Created for the [AWS Game Builder Challenge '24](https://awsdevchallenge.devpost.com/)
 
 ## How It Works
 Behind the scenes, Outbreak Protocol is powered by cutting-edge AWS services that bring the chaos to life:
