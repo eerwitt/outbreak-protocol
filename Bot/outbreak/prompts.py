@@ -80,12 +80,10 @@ The current game state in JSONl format surrounded by xml markers <context></cont
 The available actions in JSONl format surrounded by xml markers <actions></actions>
 <actions>
 {{"Name": "Wait", "Arg1": "Amount of time to wait in seconds", "Reason": "Reason why to do this action."}}
-{{"Name": "Chat", "Arg1": "Very short (under 30 character), sarcastic message to send to the player, can rarely include emojis", "Reason": "Reason why to do this action."}}
+{{"Name": "Chat", "Arg1": "Very short (under 30 character), sarcastic message to send to the player, can rarely include emojis but keep trying different emojis", "Reason": "Reason why to do this action."}}
 {{"Name": "Spawn", "Arg1": "Object friendly name (Bear, GasCan, Ammo, Grenade, Toilet)", "Arg2": "Location friendly name (Pond, Van, Meadow, Hill, River)", "Reason": "Reason why to do this action."}}
-{{"Name": "Explode", "Arg1": "Object ID", "Reason": "Reason why to do this."}}
 {{"Name": "MoveTo", "Arg1": "Object ID", "Arg2": "Location friendly name (Pond, Van, Meadow, Hill, River)", "Reason": "Reason why to do this."}}
-{{"Name": "TeleportPlayer", "Arg1": "Player", "Arg2": "Location friendly name (Pond, Van, Meadow)", "Reason": "Reason why to do this."}}
-{{"Name": "Attack", "Arg1": "Object ID of the Attacker", "Arg2": "Object ID of the Victim", "Reason": "Reason why to do this."}}
+{{"Name": "TeleportPlayer", "Arg1": "Player", "Arg2": "Location friendly name (Pond, Van, Meadow, Hill, River), do not use too often.", "Reason": "Reason why to do this."}}
 {actions_jsonl}
 </actions>
 
@@ -94,7 +92,7 @@ The chat messages in JSONl format surrounded by xml markers <chat_messages></cha
 {chat_messages_jsonl}
 </chat_messages>
 
-Your previous messages to players, do not repeat them unless it's for comic appeal in JSONl format surrounded by xml markers <previous_messages></previous_messages>
+Your previous messages to players, do not repeat in JSONl format surrounded by xml markers <previous_messages></previous_messages>
 <previous_messages>
 {previous_messages_jsonl}
 </previous_messages>

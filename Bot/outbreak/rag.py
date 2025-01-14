@@ -47,7 +47,7 @@ class BedrockRAGClient:
             # Parse and return the response
             response_payload = RAGResponse.from_json(response['body'].read())
             for chat_response in response_payload.content:
-                logger.info(json.loads(chat_response.text))
+                logger.debug(json.loads(chat_response.text))
             return response_payload
 
         except Exception as e:

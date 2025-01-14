@@ -135,55 +135,48 @@ class Bot(discord.Client):
         )
 
         response = self.rag.make_rag_request(model_id=model_id, rag_request_payload=rag_request_payload)
-        notes = set()
+        notes = list()
         for content in response.content:
             if content.type == "text":
                 parsed = json.loads(content.text)
                 if parsed["Header"]["Notes"]:
-                    notes.add(parsed["Header"]["Notes"])
+                    notes.append(parsed["Header"]["Notes"])
 
                 remote_object_path = add_uepie_prefix("/Game/LBG/Maps/L_LBG_Medow.L_LBG_Medow:PersistentLevel.B_RemoteCaller_C_1")
 
                 for action in parsed["Actions"]:
+                    logger.info(action)
+                    ue_response = None
                     if action["Name"] == "Chat":
                         self.prompt_generator.add_previous_message(action["Arg1"])
                         ue_response = await self.backend.call_object_function(remote_object_path, "Chat", {"Arg1": action["Arg1"]})
-                        if not ue_response.ResponseCode == 200:
-                            logger.error(f"Failed to call function in UE: {ue_response}")
-                            notes.add(ue_response)
                     elif action["Name"] == "Spawn":
                         ue_response = await self.backend.call_object_function(
                             remote_object_path,
                             "Spawn",
                             {"Arg1": action["Arg1"], "Arg2": action["Arg2"]})
-                        if not ue_response.ResponseCode == 200:
-                            logger.error(f"Failed to call function in UE: {ue_response}")
-                            notes.add(ue_response)
                     elif action["Name"] == "TeleportPlayer":
-                        logger.info("Teleporting player")
                         ue_response = await self.backend.call_object_function(
                             remote_object_path,
                             "TeleportPlayer",
                             {"Arg1": action["Arg1"], "Arg2": action["Arg2"]})
-                        if not ue_response.ResponseCode == 200:
-                            logger.error(f"Failed to call function in UE: {ue_response}")
-                            notes.add(ue_response)
                     elif action["Name"] == "MoveTo":
-                        logger.info("Moving bear")
                         ue_response = await self.backend.call_object_function(
                             remote_object_path,
                             "MoveTo",
                             {"Arg1": action["Arg1"], "Arg2": action["Arg2"]})
-                        if not ue_response.ResponseCode == 200:
-                            logger.error(f"Failed to call function in UE: {ue_response}")
-                            notes.add(ue_response)
                     elif action["Name"] == "Wait":
-                        logger.info(f"Waiting because {action["Reason"]}")
                         wait_time = action["Arg1"]
                         if type(wait_time) is str:
                             wait_time = float(wait_time)
 
                         await asyncio.sleep(wait_time)
+                    
+                    if ue_response and not ue_response.ResponseCode == 200:
+                        logger.error(f"Failed to call function in UE: {ue_response}")
+                        notes.append(ue_response)
+
+
 
         self.request_running = False
         return notes

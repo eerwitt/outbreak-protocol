@@ -1,7 +1,11 @@
 # Outbreak Protocol (WIP)
 A zombie-inspired FPS where deadly bears meet emergent, AI-driven chaos.
 
-![The Bears](Source/Media/deaf-bear.gif)
+![Intensify Spawn](Source/Media/intensify-spawn.gif)
+![Added Urgency](Source/Media/added-urgency.gif)
+![Challenge](Source/Media/challenge.gif)
+![Low Ammo](Source/Media/low-ammo.gif)
+![Spawn](Source/Media/spawn.gif)
 
 *"Make the bear chasing him deaf and angry"*
 
@@ -70,3 +74,85 @@ Avoid bears, dodge explosions, and watch as your friends’ conversations lead t
 * **Cutting-Edge Technology**: Powered by Amazon Bedrock’s RAG capabilities, the bot pushes the boundaries of traditional game mechanics by enabling AI-driven chaos.
 
 Explore Outbreak Protocol and see how AWS services power the perfect blend of survival horror and AI-driven chaos.
+
+
+## Updates from the LLM
+
+```
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Shack', 'Reason': "Introduce unexpected bear threat near player's potential safe zone"}
+{'Name': 'Chat', 'Arg1': 'Bears incoming! 🐻', 'Reason': 'Alert player to imminent danger and create tension'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Van', 'Reason': 'Provide additional resources to help player survive bear encounter'}
+{'Name': 'Wait', 'Arg1': '5', 'Reason': 'Create suspense and allow player to prepare for bear threat'}
+{'Name': 'Chat', 'Arg1': "They're getting closer... 😱", 'Reason': "Maintain player's sense of urgency and excitement"}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Meadow', 'Reason': 'Introduce immediate threat to keep player alert and create tension'}
+{'Name': 'Chat', 'Arg1': 'Bears smell your fear! 🐻', 'Reason': 'Add dramatic tension and hint at incoming challenge'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Hill', 'Reason': 'Provide strategic resource for player survival'}
+{'Name': 'Wait', 'Arg1': 5, 'Reason': 'Create suspenseful pause before next action'}
+{'Name': 'Spawn', 'Arg1': 'Grenade', 'Arg2': 'River', 'Reason': 'Give player additional tactical option for bear defense'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Meadow', 'Reason': 'Introduce immediate threat to increase player adrenaline'}
+{'Name': 'Chat', 'Arg1': 'Bears incoming! Watch your back! 🐻', 'Reason': 'Create tension and warn player of imminent danger'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Van', 'Reason': 'Provide strategic resource near potential escape route'}
+{'Name': 'Wait', 'Arg1': '5', 'Reason': 'Allow player time to react and prepare for bear encounter'}
+{'Name': 'Chat', 'Arg1': 'More zombear friends joining the party! 🧟\u200d♂️🐻', 'Reason': 'Escalate challenge and maintain excitement'}
+{'Name': 'Chat', 'Arg1': 'Bears closing in! 🐻', 'Reason': 'Create immediate tension and alert the player to incoming threat'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Meadow', 'Reason': "Introduce additional threat near player's location to increase challenge"}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Shack', 'Reason': 'Provide player with additional resources to fight incoming bears'}
+{'Name': 'Chat', 'Arg1': 'Zombears hungry! 🧟\u200d♂️🐻', 'Reason': 'Maintain high-energy narrative and hint at unique zombie bear threat'}
+{'Name': 'Wait', 'Arg1': '3', 'Reason': 'Create brief suspense before next action'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Pond', 'Reason': "Introduce immediate threat to player's current location"}
+{'Name': 'Chat', 'Arg1': 'Zombear behind you! 😱', 'Reason': 'Create tension and alert player to imminent danger'}
+{'Name': 'Spawn', 'Arg1': 'Grenade', 'Arg2': 'Meadow', 'Reason': 'Provide additional tactical resource for player survival'}
+{'Name': 'Wait', 'Arg1': 3, 'Reason': 'Allow brief moment of suspense before next action'}
+{'Name': 'Chat', 'Arg1': 'More bears incoming! 🐻', 'Reason': 'Maintain high-intensity gameplay atmosphere'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Meadow', 'Reason': 'Continue escalating challenge and threat level'}
+{'Name': 'Chat', 'Arg1': 'Zombears closing in! 🐻', 'Reason': 'Build tension and warn player of imminent danger'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Hill', 'Reason': "Spawn a bear near player's current location to create immediate threat"}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Hill', 'Reason': 'Provide some additional ammo to help player survive'}
+{'Name': 'Chat', 'Arg1': 'One shot left? Good luck! 😱', 'Reason': "Emphasize player's low health and create dramatic tension"}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Meadow', 'Reason': 'Create additional threat from another direction'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': "Introduce unexpected threat near player's current location"}
+{'Name': 'Chat', 'Arg1': 'Zombears in the forest! 🐻', 'Reason': 'Alert player to imminent danger and increase tension'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Hill', 'Reason': 'Provide strategic resupply point for player survival'}
+{'Name': 'Wait', 'Arg1': 5, 'Reason': 'Create suspense and allow player to react to new threats'}
+{'Name': 'Chat', 'Arg1': 'More bears incoming! Watch out! 😱', 'Reason': 'Maintain high-intensity gameplay atmosphere'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Van', 'Reason': 'Provide player with additional ammunition given low health status'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Create tension by spawning a zombie bear in a different location from player'}
+{'Name': 'Chat', 'Arg1': 'Zombears smell weakness! 🐻', 'Reason': "Increase player's sense of urgency and immersion"}
+{'Name': 'Wait', 'Arg1': '15', 'Reason': 'Allow player time to strategize and react to new challenges'}
+{'Name': 'Spawn', 'Arg1': 'Grenade', 'Arg2': 'Hill', 'Reason': 'Provide tactical option for player survival'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Hill', 'Reason': "Spawn a bear near the player's current location to create immediate tension"}
+{'Name': 'Chat', 'Arg1': 'Zombear right behind you! 😱', 'Reason': 'Create a sense of urgency and surprise'}
+{'Name': 'Spawn', 'Arg1': 'Grenade', 'Arg2': 'Meadow', 'Reason': 'Provide an additional tactical resource for the player'}
+{'Name': 'Wait', 'Arg1': 3, 'Reason': 'Give player a brief moment to react to the spawned bear'}
+{'Name': 'Chat', 'Arg1': 'More zombears incoming! 🐻', 'Reason': 'Maintain the high-tension atmosphere'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Introduce unexpected threat to increase tension'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Hill', 'Reason': 'Create multi-directional threat to keep player alert'}
+{'Name': 'Chat', 'Arg1': 'Zombears converging! 🐻', 'Reason': 'Warn player of impending danger and maintain excitement'}
+{'Name': 'Wait', 'Arg1': 5, 'Reason': 'Allow tension to build and give player time to react'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Meadow', 'Reason': "Provide strategic resource to maintain player's combat readiness"}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Create tension by spawning zombear in nearby forest location'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Van', 'Reason': 'Provide player with critical resupply given low health'}
+{'Name': 'Chat', 'Arg1': 'Zombears smell your weakness! 🐻', 'Reason': 'Maintain narrative tension and hint at impending danger'}
+{'Name': 'Wait', 'Arg1': 5, 'Reason': 'Create suspense and allow player time to react to new threats'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Hill', 'Reason': 'Additional threat to keep player moving and alert'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Increase immediate threat to keep player on edge'}
+{'Name': 'Chat', 'Arg1': 'Zombears closing in! 🐻', 'Reason': 'Create tension and alert player to imminent danger'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Forest', 'Reason': 'Provide limited resource to give player hope of survival'}
+{'Name': 'Wait', 'Arg1': 3, 'Reason': 'Create brief moment of suspense before next action'}
+{'Name': 'Chat', 'Arg1': 'One shot might save you! 😱', 'Reason': 'Emphasize the high-stakes survival situation'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Van', 'Reason': 'Provide critical ammo resource for player survival'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Create immediate threat to increase game tension'}
+{'Name': 'Chat', 'Arg1': 'Zombears incoming! Low ammo? Tough luck! 😱', 'Reason': "Heighten player's sense of urgency and challenge"}
+{'Name': 'Wait', 'Arg1': '5', 'Reason': 'Allow time for player to react to new threats and resources'}
+{'Name': 'Spawn', 'Arg1': 'Grenade', 'Arg2': 'Hill', 'Reason': 'Provide additional tactical option for player survival'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Pond', 'Reason': 'Provide critical ammo resupply for player survival'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Create immediate tension and challenge for the player'}
+{'Name': 'Chat', 'Arg1': 'Zombears closing in! Grab that ammo! 🐻', 'Reason': "Heighten player's sense of urgency and excitement"}
+{'Name': 'Wait', 'Arg1': '3', 'Reason': 'Allow brief moment of suspense before next action'}
+{'Name': 'Spawn', 'Arg1': 'Grenade', 'Arg2': 'Hill', 'Reason': 'Provide tactical option for player to manage multiple threats'}
+{'Name': 'Spawn', 'Arg1': 'Bear', 'Arg2': 'Forest', 'Reason': 'Introduce additional threat to keep player on edge'}
+{'Name': 'Chat', 'Arg1': 'Bears smell your fear! 🐻', 'Reason': 'Maintain narrative tension and player immersion'}
+{'Name': 'Spawn', 'Arg1': 'Ammo', 'Arg2': 'Hill', 'Reason': "Provide strategic resource given player's current ammo count"}
+{'Name': 'Chat', 'Arg1': 'Ammo incoming! Survive! 💥', 'Reason': 'Encourage player to strategically collect resources'}
+{'Name': 'Wait', 'Arg1': '5', 'Reason': 'Create brief moment of suspense before next challenge'}
+```
