@@ -19,8 +19,7 @@ from websockets.exceptions import ConnectionClosedError, InvalidURI, InvalidHand
 
 from outbreak import models
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
@@ -272,6 +271,30 @@ class UE5RemoteControlClient:
         )
 
         return await self.make_request(message.to_json())
+
+    async def get_remote_preset(self, preset_name: str):
+        """
+        Send a request to retrieve a Remote Control Preset.
+
+        Args:
+            preset_name (str): The name of the preset to retrieve.
+        """
+        request_id = self.generate_request_id()
+        message = models.WebsocketHttpRequest(
+            MessageName="http",
+            Parameters=models.Parameters(
+                RequestId=request_id,
+                Url=f"/remote/preset/{preset_name}",
+                Verb="GET",
+                Body={
+                }
+            )
+        )
+
+        raw_response = models.WebsocketResponse.from_dict(await self.make_request(message.to_json()))
+        preset = models.PresetResponseBody.from_dict(raw_response.ResponseBody)
+
+        return preset
 
     async def make_request(self, request: str, timeout: float = 5.0) -> str:
         """
